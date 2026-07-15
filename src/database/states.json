@@ -1,0 +1,18 @@
+[
+  { "id": 1,  "name": "Johor",            "type": "state",             "capital": "Johor Bahru",     "region": "Peninsular Malaysia", "iso_code": "MY-01" },
+  { "id": 2,  "name": "Kedah",            "type": "state",             "capital": "Alor Setar",      "region": "Peninsular Malaysia", "iso_code": "MY-02" },
+  { "id": 3,  "name": "Kelantan",         "type": "state",             "capital": "Kota Bharu",      "region": "Peninsular Malaysia", "iso_code": "MY-03" },
+  { "id": 4,  "name": "Melaka",           "type": "state",             "capital": "Melaka City",     "region": "Peninsular Malaysia", "iso_code": "MY-04" },
+  { "id": 5,  "name": "Negeri Sembilan",  "type": "state",             "capital": "Seremban",        "region": "Peninsular Malaysia", "iso_code": "MY-05" },
+  { "id": 6,  "name": "Pahang",           "type": "state",             "capital": "Kuantan",         "region": "Peninsular Malaysia", "iso_code": "MY-06" },
+  { "id": 7,  "name": "Pulau Pinang",     "type": "state",             "capital": "George Town",     "region": "Peninsular Malaysia", "iso_code": "MY-07" },
+  { "id": 8,  "name": "Perak",            "type": "state",             "capital": "Ipoh",            "region": "Peninsular Malaysia", "iso_code": "MY-08" },
+  { "id": 9,  "name": "Perlis",           "type": "state",             "capital": "Kangar",          "region": "Peninsular Malaysia", "iso_code": "MY-09" },
+  { "id": 10, "name": "Selangor",         "type": "state",             "capital": "Shah Alam",       "region": "Peninsular Malaysia", "iso_code": "MY-10" },
+  { "id": 11, "name": "Terengganu",       "type": "state",             "capital": "Kuala Terengganu","region": "Peninsular Malaysia", "iso_code": "MY-11" },
+  { "id": 12, "name": "Sabah",            "type": "state",             "capital": "Kota Kinabalu",   "region": "East Malaysia",       "iso_code": "MY-12" },
+  { "id": 13, "name": "Sarawak",          "type": "state",             "capital": "Kuching",         "region": "East Malaysia",       "iso_code": "MY-13" },
+  { "id": 14, "name": "Kuala Lumpur",     "type": "federal_territory", "capital": "Kuala Lumpur",    "region": "Peninsular Malaysia", "iso_code": "MY-14" },
+  { "id": 15, "name": "Labuan",           "type": "federal_territory", "capital": "Victoria",        "region": "East Malaysia",       "iso_code": "MY-15" },
+  { "id": 16, "name": "Putrajaya",        "type": "federal_territory", "capital": "Putrajaya",       "region": "Peninsular Malaysia", "iso_code": "MY-16" }
+]

@@ -1,0 +1,31 @@
+{
+  "name": "my-apis",
+  "version": "1.0.0",
+  "description": "MY APIs - a fast, secure, open REST API for Malaysia's states, districts (daerah), and mukims.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "malaysia",
+    "rest-api",
+    "geo",
+    "states",
+    "districts",
+    "daerah",
+    "negeri",
+    "malaysia-location-api",
+    "mukim",
+    "bandar",
+    "pekan"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

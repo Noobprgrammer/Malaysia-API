@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY APIs — Malaysia Geo Location API</title>
+  <meta name="description" content="A fast, open REST API for Malaysia's states, federal territories, and districts. Try every endpoint live in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top">
+    <div class="wordmark">
+      <span class="wordmark-my">MY</span><span class="wordmark-apis">APIs</span>
+    </div>
+    <nav class="top-links">
+      <a href="#endpoints">Endpoints</a>
+      <a href="#console">Try it</a>
+      <a href="https://github.com" rel="noopener" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Open data · No API key · CORS enabled</p>
+      <h1>Every state and district in Malaysia,<br />one <span class="accent">GET</span> away.</h1>
+      <p class="lede">
+        A free REST API for Malaysia's 13 states, 3 federal territories, 159
+        administrative districts, and 1,944 mukims — from Perlis to Tawau. Built for address forms,
+        dropdowns, dashboards, and anything location-based.
+      </p>
+      <div class="stats" role="list">
+        <div class="stat" role="listitem"><span class="stat-n" id="stat-states">16</span><span class="stat-l">states &amp; territories</span></div>
+        <div class="stat" role="listitem"><span class="stat-n" id="stat-districts">159</span><span class="stat-l">districts</span></div>
+        <div class="stat" role="listitem"><span class="stat-n">1,944</span><span class="stat-l">mukims, bandar &amp; pekan</span></div>
+        <div class="stat" role="listitem"><span class="stat-n">0</span><span class="stat-l">API keys needed</span></div>
+      </div>
+    </section>
+
+    <section class="console" id="console" aria-label="Live API console">
+      <div class="console-bar">
+        <span class="method">GET</span>
+        <span class="base" id="base-url">/geo/v1/</span>
+        <input
+          id="path-input"
+          type="text"
+          value="states"
+          spellcheck="false"
+          autocomplete="off"
+          aria-label="API path after /geo/v1/"
+        />
+        <button id="send" type="button">Send request</button>
+      </div>
+
+      <div class="chips" aria-label="Example requests">
+        <button class="chip" data-path="states">All states</button>
+        <button class="chip" data-path="states/selangor">Selangor + districts</button>
+        <button class="chip" data-path="districts/12">Districts of Sabah</button>
+        <button class="chip" data-path="districts/sarawak">Districts of Sarawak</button>
+        <button class="chip" data-path="search/kuala">Search “kuala”</button>
+        <button class="chip" data-path="mukims/klang">Mukims of Klang</button>
+        <button class="chip" data-path="mukims/26?type=mukim">Mukims of Kota Bharu</button>
+      </div>
+
+      <div class="response">
+        <div class="response-meta">
+          <span id="resp-status" class="badge">—</span>
+          <span id="resp-time" class="dim"></span>
+          <button id="copy" type="button" class="ghost" hidden>Copy JSON</button>
+        </div>
+        <pre id="output" tabindex="0"><code>Press “Send request” to call the API.</code></pre>
+      </div>
+    </section>
+
+    <section class="endpoints" id="endpoints">
+      <h2>Endpoints</h2>
+      <p class="section-note">All endpoints are prefixed with <code>/geo/v1</code> and return JSON.</p>
+
+      <table>
+        <thead>
+          <tr><th scope="col">Endpoint</th><th scope="col">Returns</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>GET /geo/v1/states</code></td>
+            <td>All 13 states and 3 federal territories, with capitals, regions, and ISO 3166-2 codes.</td>
+          </tr>
+          <tr>
+            <td><code>GET /geo/v1/states/{id|name}</code></td>
+            <td>One state by ID (<code>10</code>) or name (<code>selangor</code>), including its districts.</td>
+          </tr>
+          <tr>
+            <td><code>GET /geo/v1/districts</code></td>
+            <td>All 159 administrative districts nationwide.</td>
+          </tr>
+          <tr>
+            <td><code>GET /geo/v1/districts/{id|name}</code></td>
+            <td>Districts of one state — e.g. <code>/districts/sabah</code> or <code>/districts/12</code>.</td>
+          </tr>
+          <tr>
+            <td><code>GET /geo/v1/mukims</code></td>
+            <td>All 1,944 sub-districts. Filter by kind with <code>?type=mukim</code>, <code>?type=bandar</code>, or <code>?type=pekan</code>.</td>
+          </tr>
+          <tr>
+            <td><code>GET /geo/v1/mukims/{id|name}</code></td>
+            <td>Sub-districts of one district — e.g. <code>/mukims/klang</code> or <code>/mukims/76</code>. Same <code>?type=</code> filter.</td>
+          </tr>
+          <tr>
+            <td><code>GET /geo/v1/search/{query}</code></td>
+            <td>Case-insensitive search across states and districts. Filter with <code>?type=states</code>, <code>?type=districts</code>, or <code>?type=mukims</code>.</td>
+          </tr>
+          <tr>
+            <td><code>GET /health</code></td>
+            <td>Service status and uptime.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="usage">
+      <h2>Use it anywhere</h2>
+      <p class="section-note">No key, no sign-up. Responses are cached and safe to call from the browser.</p>
+      <pre class="snippet"><code>// Populate a state dropdown
+const res = await fetch("/geo/v1/states");
+const { data } = await res.json();
+
+data.forEach(({ id, name }) => {
+  stateSelect.add(new Option(name, id));
+});
+
+// Then load districts when a state is picked
+const districts = await fetch(`/geo/v1/districts/${stateSelect.value}`)
+  .then(r => r.json());</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Open source under the MIT licence. Data covers all states, federal territories, and gazetted districts of Malaysia.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
