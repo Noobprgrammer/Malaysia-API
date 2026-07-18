@@ -1,6 +1,6 @@
 # MY APIs – Malaysia Geo Location API (v1)
 
-Official Link: https://malaysia-api-lyej-bxyshjviy-meekail-kamal-mugdhos-projects.vercel.app/
+Official Link: https://malaysia-api-one.vercel.app
 
 A fast, open-source REST API for Malaysia's administrative geography: all **13 states**, **3 federal territories**, **159 administrative districts** (daerah / jajahan), and **1,944 sub-districts** — mukim, bandar, and pekan — from Perlis to Tawau.
 
